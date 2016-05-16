@@ -1,6 +1,6 @@
-# `classroom-control-vf`
+# `classroom-control-pi`
 
-This is the classroom control repository for the Virtual Fundamentals class.
+This is the classroom control repository for the Puppetizing Infrastructure class.
 
 ## Usage
 
