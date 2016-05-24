@@ -1,7 +1,7 @@
 <%
 $path = $osfamily ? {
   'centos'  => '/etc/motd',
-  'windows' => 'C:/Users/Administrators/Desktop/README.txt',
+  'windows' => 'C:/Users/Administrator/Desktop/README.txt',
 }
 -%>
 file { <%= $path %>:
