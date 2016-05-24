@@ -7,7 +7,7 @@ class examples::puppetize {
   
   $path = $osfamily ? {
     'centos'  => '/root/example.pp',
-    'windows' => 'C:/Users/Administrators/example.pp',
+    'windows' => 'C:/Users/Administrator/example.pp',
   }
 
   file { $path:
