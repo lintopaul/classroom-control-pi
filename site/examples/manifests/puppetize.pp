@@ -1,17 +1,22 @@
 class examples::puppetize {
-  File {
-    owner => 'root',
-    group => 'root',
-    mode  => '0644',
+
+  if $osfamily == 'CentOS' {
+    file { '/root/example.pp':
+      ensure  => file,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => epp('/examples/example.epp'),
+    }
+  }
+  else {
+    file { 'C:/Users/Administrator/example.pp':
+      ensure  => file,
+      owner   => 'Administrator',
+      group   => 'Administrator',
+      mode    => '0664',
+      content => epp('/examples/example.epp'),
+    }
   }
   
-  $path = $osfamily ? {
-    'centos'  => '/root/example.pp',
-    'windows' => 'C:/Users/Administrator/example.pp',
-  }
-
-  file { $path:
-    ensure  => file,
-    content => epp('/examples/example.epp'),
-  }
 }
