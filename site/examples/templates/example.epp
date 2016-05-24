@@ -1,4 +1,10 @@
-file { '/etc/motd':
+<%
+$path = $osfamily ? {
+  'centos'  => '/etc/motd',
+  'windows' => 'C:/Users/Administrators/Desktop/README.txt',
+}
+-%>
+file { <%= $path %>:
   ensure  => file,
   owner   => 'root',
   group   => 'root',
