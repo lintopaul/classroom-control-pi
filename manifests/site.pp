@@ -18,7 +18,7 @@
 
 # Define filebucket 'main':
 filebucket { 'main':
-  server => 'puppetfactory.puppetlabs.vm',
+  server => 'master.puppetlabs.vm',
   path   => false,
 }
 
