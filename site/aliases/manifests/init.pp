@@ -8,6 +8,7 @@ class aliases (
         owner   => 'root',
         group   => 'root',
         mode    => '0644',
+        content => ???,
     }
     exec { '/usr/bin/newaliases':
         refreshonly => true,
