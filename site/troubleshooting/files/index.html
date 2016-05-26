@@ -1,0 +1,37 @@
+<html
+	<head>
+		<title>Iiiit's ALIVE</title>
+		<style>
+    body {
+      animation: colorchange .75s; /* animation-name followed by duration in seconds*/
+      -webkit-animation: colorchange .75s infinite; /* Chrome and Safari */
+    }
+    div#live {
+      padding: 15% 25%;
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+    </style>
+	</head>
+	<body>
+  	<div id="live">
+      <img src="live.gif" />
+  	</div>
+	</body>
+</html>
