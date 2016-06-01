@@ -1,6 +1,6 @@
 <%
 $path = $osfamily ? {
-  'centos'  => '/etc/motd',
+  'RedHat'  => '/etc/motd',
   'windows' => 'C:/Users/Administrator/Desktop/README.txt',
 }
 -%>
