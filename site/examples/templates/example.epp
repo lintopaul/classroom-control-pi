@@ -4,7 +4,7 @@ $path = $osfamily ? {
   'windows' => 'C:/Users/Administrator/Desktop/README.txt',
 }
 -%>
-file { <%= $path %>:
+file { '<%= $path %>':
   ensure  => file,
   owner   => 'root',
   group   => 'root',
