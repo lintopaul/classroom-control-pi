@@ -1,6 +1,6 @@
 class examples::puppetize {
 
-  if $osfamily == 'CentOS' {
+  if $osfamily == 'RedHat' {
     file { '/root/example.pp':
       ensure  => file,
       owner   => 'root',
