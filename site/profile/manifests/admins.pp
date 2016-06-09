@@ -6,7 +6,8 @@ class profile::admins {
     'windows' => 'Puppet8Labs!',
   }
 
-  skeleton::managed_user { ???:
-    password => $password,
-  }
+# What does this resource need to complete it? How would you declare another?
+#  skeleton::managed_user { ???:
+#    password => $password,
+#  }
 }
