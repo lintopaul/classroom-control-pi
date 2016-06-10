@@ -3,5 +3,5 @@ class troubleshooting {
 
   unless $::provisioned {
     include troubleshooting::provisioning
-
+  }
 }
