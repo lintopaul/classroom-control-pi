@@ -14,7 +14,7 @@ class troubleshooting::provisioning {
   }
 
   $facts_dot_d = $osfamily ? {
-    'RedHat'  => '/etc/puppetlabs/facter/facts.d'
+    'RedHat'  => '/etc/puppetlabs/facter/facts.d',
     'windows' => 'C:/ProgramData/PuppetLabs/facter/facts.d',
   }
   file { "${facts_dot_d}/provisioned.txt":
