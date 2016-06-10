@@ -1,7 +1,7 @@
 class dsciis {
 
   # TODO: add the correct name to this resource so DSC can trigger reboots
-  reboot { ???:
+  reboot { '???':
     when    => pending,
     timeout => 15,
   }
