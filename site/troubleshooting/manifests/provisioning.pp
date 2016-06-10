@@ -5,11 +5,11 @@ class troubleshooting::provisioning {
 
     file { '/var/www/html/index.html':
       esnure => file,
-      source => 'puppet://modules/troubleshooting/index.html',
+      source => 'puppet:///modules/troubleshooting/index.html',
     }
     file { '/var/www/html/live.gif':
       ensure => file,
-      source => 'puppet://modules/troubleshooting/live.gif',
+      source => 'puppet:///modules/troubleshooting/live.gif',
     }
   }
 
@@ -19,6 +19,6 @@ class troubleshooting::provisioning {
   }
   file { "${facts_dot_d}/provisioned.txt":
     ensure => file,
-    source => 'puppet://modules/troubleshooting/provisioned.txt',
+    source => 'puppet:///modules/troubleshooting/provisioned.txt',
   }
 }
