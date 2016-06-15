@@ -1,14 +1,24 @@
 <%
-$path = $osfamily ? {
-  'RedHat'  => '/etc/motd',
-  'windows' => 'C:/Users/Administrator/Desktop/README.txt',
+case $osfamily {
+  'RedHat': {
+    $path  = '/etc/motd'
+    $owner = 'root'
+    $group = 'root'
+    $mode  = '0644'
+  }
+  'windows': {
+    $path  = 'C:/Users/Administrator/Desktop/README.txt'
+    $owner = 'Administrator'
+    $group = 'Administrators'
+    $mode  = '0664'
+  }
 }
 -%>
 file { '<%= $path %>':
   ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
+  owner   => '<%= $owner %>',
+  group   => '<%= $group %>',
+  mode    => '<%= $mode %>',
   content => "Hey, Puppet is fun!\n",
 }
 
