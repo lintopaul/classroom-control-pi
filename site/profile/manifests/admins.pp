@@ -6,8 +6,8 @@ class profile::admins {
     'windows' => 'Puppet8Labs!',
   }
 
-# What does this resource need to complete it? How would you declare another?
-#  skeleton::managed_user { ???:
-#    password => $password,
-#  }
+  # manage several instances of our defined type
+  skeleton::managed_user { ['jose', 'alice', 'bob']:
+    password => $password,
+  }
 }
