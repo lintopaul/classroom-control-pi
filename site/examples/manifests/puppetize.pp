@@ -10,6 +10,15 @@ class examples::puppetize {
     }
   }
   else {
+    # This directory does not exist on the OpenTable Vagrant box,
+    # even though the Administrator account exists.
+    file { 'C:/Users/Administrator':
+      ensure  => directory,
+      owner   => 'Administrator',
+      group   => 'Administrator',
+      mode    => '0775',
+    }
+
     file { 'C:/Users/Administrator/example.pp':
       ensure  => file,
       owner   => 'Administrator',
